@@ -27,14 +27,14 @@ angular.module('plgn.ionic-segment', []).directive('ionSegment', function() {
             transclude: true,
             replace: true,
             template: '<li ng-transclude></li>',
-            link: function($rootScope, $scope, $element, $attr, ngModelCtrl) {
+            link: function($scope, $element, $attr, ngModelCtrl) {
                 var clickingCallback = function() {
 
                     $element.parent().find("li").removeClass("active");
                     $element.addClass("active");
                     var segment = $element.attr("value");
                     ngModelCtrl.$setViewValue(segment);
-                    $rootScope.$broadcast('ionic-segment-switched');
+                    $scope.$emit("ionic-segment-switched");
                 }
 
                 $element.bind('click', clickingCallback);
