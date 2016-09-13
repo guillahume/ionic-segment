@@ -9,7 +9,7 @@ Check out the live [demo](http://codepen.io/ihuseynoff/pen/dXOaZP)
 
 # How to use it
 
-### JS/CSS Imports 
+### JS/CSS Imports
 Please imports the following JavaScript/CSS file in your index.html.
 
 ```html
@@ -17,6 +17,7 @@ Please imports the following JavaScript/CSS file in your index.html.
 <script src="ionic-segment/dist/ionic-segment.js"></script>
 ```
 
+When switching, event "ionic-segment-switched" is broadcasted
 
 ### Angular Dependency (app.js)
 Add plgn.ionic-segment as a module dependency of your app module.
@@ -39,9 +40,9 @@ angular.module('DemoApp', ['ionic', 'plgn.ionic-segment'])
       Animations
     </ion-segment-button>
   </ion-segment>
- 
+
 <div ng-switch="categories">
-  
+
    <ion-list ng-switch-when="movies">
       <ion-item>
         Batman Begins
@@ -55,22 +56,20 @@ angular.module('DemoApp', ['ionic', 'plgn.ionic-segment'])
       </ion-item>
         .....
     </ion-list>
-    
+
     <ion-list ng-switch-when="animation">
       <ion-item>
         Ice Age
       </ion-item>
         .....
     </ion-list>
-  
+
   </div>
   ```
-## Options 
- 
+## Options
+
 setting segment cover full width
 
 ```html
   <ion-segment ng-model="categories" full="true"  assertive>
 ```
- 
-
