@@ -34,7 +34,7 @@ angular.module('plgn.ionic-segment', []).directive('ionSegment', function() {
                     $element.addClass("active");
                     var segment = $element.attr("value");
                     ngModelCtrl.$setViewValue(segment);
-                    $scope.$emit("ionic-segment-switched");
+                    $scope.$emit("ionic-segment-switched", segment);
                 }
 
                 $element.bind('click', clickingCallback);
